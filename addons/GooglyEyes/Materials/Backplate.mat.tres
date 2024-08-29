@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7crjs1qh5yrr"]
+
+[resource]
+resource_name = "Backplate"
+depth_draw_mode = 1
+metallic = 0.256
+roughness = 0.639
+uv1_scale = Vector3(1, 1, 0)
