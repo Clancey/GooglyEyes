@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsa3jqgnox55w"]
+
+[ext_resource type="Script" path="res://sample.gd" id="1_a8k8a"]
+[ext_resource type="PackedScene" uid="uid://b2cjg1qtfuv3w" path="res://addons/GooglyEyes/Prefabs/GooglyEye.tscn" id="1_cfk3k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_8iwib"]
+
+[node name="Sample" type="Node3D"]
+script = ExtResource("1_a8k8a")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.376218, 2.89391)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_8iwib")
+
+[node name="GooglyEyes" parent="MeshInstance3D" instance=ExtResource("1_cfk3k")]
+transform = Transform3D(-0.1, 0, -1.50996e-08, 0, 0.1, 0, 1.50996e-08, 0, -0.1, 0.158958, 0.14625, -0.477269)
+
+[node name="GooglyEyes2" parent="MeshInstance3D" instance=ExtResource("1_cfk3k")]
+transform = Transform3D(-0.1, 0, -1.50996e-08, 0, 0.1, 0, 1.50996e-08, 0, -0.1, -0.152541, 0.14625, -0.477269)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.798394, 0.602136, 0, -0.602136, 0.798394, 0, 1.96997, 2.54175)
